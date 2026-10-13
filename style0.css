@@ -1,0 +1,875 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f3f8ed,
+            #eef7e8
+        );
+
+    color: #263b2b;
+
+    line-height: 1.6;
+}
+
+
+
+
+header {
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid #d8e6d3;
+}
+
+
+.navbar {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 16px 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.logo {
+    font-size: 1.4rem;
+
+    font-weight: 700;
+
+    color: #315c3b;
+}
+
+
+.nav-links {
+    display: flex;
+
+    list-style: none;
+
+    gap: 30px;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+
+    color: #385440;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #6c9b5b;
+}
+
+
+
+
+.hero {
+    min-height: 88vh;
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 70px 30px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+
+.small-title {
+    color: #719b62;
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+
+.hero h1 {
+    font-size: 4rem;
+
+    line-height: 1.1;
+
+    color: #294633;
+}
+
+
+.hero h1 span {
+    color: #719b62;
+}
+
+
+.intro {
+    margin-top: 25px;
+
+    max-width: 550px;
+
+    font-size: 1.1rem;
+
+    color: #5a6f5d;
+}
+
+
+
+.buttons {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+
+.btn {
+    display: inline-block;
+
+    padding: 12px 24px;
+
+    border-radius: 30px;
+
+    background: #507b4e;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.btn:hover {
+    transform: translateY(-3px);
+
+    background: #385f3b;
+
+    box-shadow: 0 8px 20px rgba(50, 90, 55, 0.2);
+}
+
+
+.btn.outline {
+    background: transparent;
+
+    color: #507b4e;
+
+    border: 2px solid #507b4e;
+}
+
+
+
+
+.hero-art {
+    height: 420px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 45% 45% 15px 15px;
+
+    background:
+        linear-gradient(
+            #d8efd1,
+            #f1f7df
+        );
+
+    box-shadow:
+        inset 0 -50px 80px rgba(83, 125, 72, 0.12);
+}
+
+
+.sun {
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: #f5cf70;
+
+    top: 55px;
+    right: 80px;
+
+    box-shadow: 0 0 40px rgba(245, 207, 112, 0.5);
+}
+
+
+.mountain {
+    position: absolute;
+
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 180px solid transparent;
+    border-right: 180px solid transparent;
+    border-bottom: 240px solid #789b72;
+}
+
+
+.mountain1 {
+    left: -50px;
+}
+
+
+.mountain2 {
+    right: -100px;
+
+    border-bottom-color: #557a5c;
+}
+
+
+.tree {
+    position: absolute;
+
+    bottom: 20px;
+
+    font-size: 90px;
+
+    filter: drop-shadow(
+        5px 7px 5px rgba(0,0,0,0.12)
+    );
+}
+
+
+.tree1 {
+    left: 60px;
+}
+
+
+.tree2 {
+    left: 170px;
+
+    font-size: 65px;
+}
+
+
+.tree3 {
+    right: 50px;
+
+    font-size: 85px;
+}
+
+
+.bird {
+    position: absolute;
+
+    top: 120px;
+    left: 130px;
+
+    font-size: 50px;
+
+    transform: rotate(-15deg);
+}
+
+
+/* =========================================
+   HIGHLIGHTS
+========================================= */
+
+.highlights {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 70px 25px;
+}
+
+
+.highlights h2 {
+    text-align: center;
+
+    color: #31563a;
+
+    margin-bottom: 35px;
+
+    font-size: 2rem;
+}
+
+
+.card-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.nature-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    border: 1px solid #dbe8d7;
+
+    transition: 0.3s;
+}
+
+
+.nature-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 30px rgba(56, 95, 59, 0.12);
+}
+
+
+.icon {
+    font-size: 2rem;
+
+    margin-bottom: 15px;
+}
+
+
+.nature-card h3 {
+    margin-bottom: 10px;
+
+    color: #416b49;
+}
+
+
+.nature-card p {
+    color: #69786b;
+}
+
+
+
+.page-container {
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 60px 25px;
+}
+
+
+.resume-header,
+.biodata-header {
+    padding: 50px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dcefd6,
+            #f7f9e9
+        );
+
+    margin-bottom: 35px;
+}
+
+
+.resume-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.resume-header h1,
+.biodata-header h1 {
+    font-size: 3rem;
+
+    color: #31583b;
+}
+
+
+.resume-header p,
+.biodata-header p {
+    color: #657766;
+}
+
+
+.leaf-symbol {
+    font-size: 5rem;
+}
+
+
+
+.resume-section {
+    background: white;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    border-radius: 20px;
+
+    border-left: 5px solid #739a68;
+
+    box-shadow:
+        0 5px 20px rgba(50, 80, 50, 0.05);
+}
+
+
+.resume-section h2 {
+    color: #426b48;
+
+    margin-bottom: 18px;
+}
+
+
+
+.timeline {
+    border-left: 2px solid #a9c7a1;
+
+    padding-left: 25px;
+}
+
+
+.timeline-item {
+    position: relative;
+
+    margin-bottom: 25px;
+}
+
+
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #719b62;
+
+    left: -32px;
+
+    top: 7px;
+}
+
+
+.timeline-item h3 {
+    color: #365d3d;
+}
+
+
+.timeline-item span {
+    color: #839084;
+
+    font-size: 0.9rem;
+}
+
+
+.green-text {
+    color: #719b62;
+
+    font-weight: 600;
+}
+
+
+
+
+.skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+.skills span {
+    padding: 8px 16px;
+
+    border-radius: 20px;
+
+    background: #e7f2e2;
+
+    color: #456d48;
+
+    font-weight: 600;
+}
+
+
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.project-card {
+    padding: 20px;
+
+    background: #f5f9f1;
+
+    border-radius: 15px;
+
+    border: 1px solid #dce9d7;
+}
+
+
+.project-card h3 {
+    color: #416b48;
+
+    margin-bottom: 10px;
+}
+
+
+
+.styled-list {
+    list-style: none;
+}
+
+
+.styled-list li {
+    padding: 8px 0;
+}
+
+
+.styled-list li::before {
+    content: "🌱 ";
+
+}
+
+
+
+
+.contact-box {
+    text-align: center;
+
+    padding: 40px;
+
+    margin-top: 30px;
+
+    border-radius: 25px;
+
+    background: #365c3e;
+
+    color: white;
+}
+
+
+.contact-box h2 {
+    margin-bottom: 15px;
+}
+
+
+.contact-box button {
+    margin-top: 20px;
+
+    padding: 11px 25px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    background: #dcefd6;
+
+    color: #31583b;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+
+.contact-box button:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   BIODATA
+========================================= */
+
+.biodata-card {
+    display: grid;
+
+    grid-template-columns: 220px 1fr;
+
+    gap: 40px;
+
+    align-items: center;
+
+    padding: 40px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 8px 25px rgba(60, 90, 60, 0.08);
+}
+
+
+.profile-circle {
+    width: 170px;
+    height: 170px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #739b68,
+            #385f3b
+        );
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 3rem;
+
+    font-weight: bold;
+}
+
+
+.personal-details h2 {
+    color: #426b48;
+
+    margin-bottom: 15px;
+}
+
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+
+th,
+td {
+    padding: 12px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #e1eadf;
+}
+
+
+th {
+    color: #507b4e;
+
+    width: 35%;
+}
+
+
+/* =========================================
+   INTERESTS
+========================================= */
+
+.interest-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.interest-grid div {
+    padding: 18px;
+
+    text-align: center;
+
+    background: #eef6e9;
+
+    border-radius: 15px;
+
+    font-weight: 600;
+
+    color: #4a704d;
+}
+
+
+.hobby-text {
+    font-size: 1.05rem;
+
+    color: #657466;
+}
+
+
+/* =========================================
+   DECLARATION
+========================================= */
+
+.declaration {
+    padding: 30px;
+
+    background: #f2f7ed;
+
+    border-radius: 20px;
+
+    margin-top: 25px;
+}
+
+
+.declaration h2 {
+    color: #416b48;
+
+    margin-bottom: 10px;
+}
+
+
+.signature {
+    margin-top: 30px;
+
+    text-align: right;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    background: #294633;
+
+    color: #dcebd7;
+
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 800px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .intro {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .card-container,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .biodata-card {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .profile-circle {
+        margin: auto;
+    }
+
+    .interest-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.7rem;
+    }
+
+    .resume-header h1,
+    .biodata-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .resume-header {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 20px;
+    }
+
+    .interest-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
